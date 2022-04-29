@@ -1,0 +1,22 @@
+.banner{
+    height: 80vh;
+    position: relative;
+}
+img{
+    
+    height:80vh;
+ 
+}
+
+ .banner::after{
+    content: "";
+    position:absolute;
+    width: 100%;
+    top: 0;
+    height: 80vh;
+    background:rgba(0, 0, 0, 0.517);
+    z-index:1;
+ }
+ .zindex{
+     z-index: 100;
+ }
