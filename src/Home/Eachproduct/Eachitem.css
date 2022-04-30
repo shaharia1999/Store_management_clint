@@ -1,0 +1,18 @@
+.eachitem{
+    display: flex;
+    align-items: center;
+  
+}
+.img{
+    width:200px;
+    height:300px;
+    margin-right: 30px;
+}
+.img img{
+    width:200px;
+    height:300px;
+}
+.each-deteles{
+    /* width: 200px; */
+   
+}

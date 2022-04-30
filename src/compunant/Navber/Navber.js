@@ -22,7 +22,7 @@ const Navber = () => {
   }
   return (
     <div className='header'>
-    <Navbar bg="black" expand="lg">
+    <Navbar bg="dark" expand="lg">
 <Container fluid>
 <h1 ><Link className='text-white text-decoration-none' to="/"><span className='text-danger'>W</span>are<span className='text-danger'>h</span>ouse</Link></h1> 
 <Navbar.Toggle aria-controls="navbarScroll" />
