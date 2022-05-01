@@ -38,7 +38,7 @@ navbarScroll
     <li><CustomLink to='/'>Home</CustomLink></li>
     <li><CustomLink to='/manageItem'>Manage Items</CustomLink></li> 
     <li><CustomLink to='/addItems'>Add items</CustomLink></li> 
-    <li><CustomLink  to='/home' >Sing in</CustomLink></li>
+    <li><CustomLink  to='/singIn' >Sing in</CustomLink></li>
     <li><CustomLink to='login'>Sing Out</CustomLink></li> 
 </div>
 

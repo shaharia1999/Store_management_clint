@@ -10,26 +10,18 @@ const InventoryDetels = () => {
         .then(res=>res.json())
         .then(data=>setProduct(data))
     },[]);
-    const {id}=useParams();
+    // const [inventory,setInventory]=useState({})
+       const {id}=useParams();
       const result=product.find(pro=>pro._id ===id);
-      const quantity=result?.quantity;
+        // setInventory(result)
+        // console.log(inventory);
       const deliverd=()=>{
-        
+        const Remaining = parseFloat( result?.quantity-1);
+
+
+      }
          
-         
-         const url=`https://afternoon-shelf-86767.herokuapp.com/product/${id}`;
-       
-         fetch(url, {
-           method: 'PUT',
-           body: JSON.stringify({}),
-       headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-       },
-    })
-  .then((response) => response.json())
-  .then((json) => console.log(json));
-         
-       }
+     
     return (
         <div>
             <h1 className='text-center p-5'>Product Deteles</h1>
