@@ -39,7 +39,7 @@ navbarScroll
     <li><CustomLink to='/manageItem'>Manage Items</CustomLink></li> 
     <li><CustomLink to='/addItems'>Add items</CustomLink></li> 
     <li><CustomLink  to='/singIn' >Sing in</CustomLink></li>
-    <li><CustomLink to='login'>Sing Out</CustomLink></li> 
+    <li><CustomLink to='login'>Log in</CustomLink></li> 
 </div>
 
 </Navbar.Collapse>

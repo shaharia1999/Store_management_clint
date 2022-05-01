@@ -2,13 +2,44 @@ import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 
 const AddItem = () => {
+     
+   const handleSubmit=(event)=>{
+    event.preventDefault()
+    const name=event.target[0].value;
+     const email=event.target[1].value
+    const price=event.target[2].value;
+    const quantity=event.target[3].value;
+    const supliyer=event.target[4].value;
+    const description=event.target[5].value;
+    const picture=event.target[6].value;
+   
+
+    const datas={name,email,price,quantity, supliyer,description,picture};
+    console.log(datas);
+    // const newAreey=[...data,datas];
+    // setData(newAreey);
+  
+
+    fetch('https://afternoon-shelf-86767.herokuapp.com/product', {
+  method: 'POST',
+  body: JSON.stringify(datas
+  ),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+    
+ 
+}
   
  //onSubmit={fromControl} 
     return (
     
         <div className='mt-5 mb-5 '>
         <h1 className='mt-5 text-center'> Add Item</h1>
-        <Form className='w-50 mx-auto'>
+        <Form onSubmit={handleSubmit} className='w-50 mx-auto'>
     <Form.Group className="mb-3" >
     <Form.Label>Name : </Form.Label>
     <Form.Control type="text" placeholder="Enter Name" />
@@ -24,6 +55,14 @@ const AddItem = () => {
 
   <Form.Group className="mb-3" controlId="formBasicPassword">
     <Form.Label>Price</Form.Label>
+    <Form.Control type="text" placeholder="Price" />
+  </Form.Group>
+  <Form.Group className="mb-3" controlId="formBasicPassword">
+    <Form.Label>quantity</Form.Label>
+    <Form.Control type="text" placeholder="Price" />
+  </Form.Group>
+  <Form.Group className="mb-3" controlId="formBasicPassword">
+    <Form.Label>Supliyer</Form.Label>
     <Form.Control type="text" placeholder="Price" />
   </Form.Group>
  
