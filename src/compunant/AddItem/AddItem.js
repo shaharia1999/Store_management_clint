@@ -1,8 +1,11 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const AddItem = () => {
-     
+  const notify = () => toast("Product add sucess full!");
    const handleSubmit=(event)=>{
     event.preventDefault()
     const name=event.target[0].value;
@@ -30,14 +33,17 @@ const AddItem = () => {
 })
   .then((response) => response.json())
   .then((json) => console.log(json));
+  notify();
+
     
  
 }
   
  //onSubmit={fromControl} 
     return (
-    
+          
         <div className='mt-5 mb-5 '>
+          <ToastContainer></ToastContainer>
         <h1 className='mt-5 text-center'> Add Item</h1>
         <Form onSubmit={handleSubmit} className='w-50 mx-auto'>
     <Form.Group className="mb-3" >

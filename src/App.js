@@ -9,6 +9,9 @@ import RequirteAuth from './compunant/RequreAuth/RequirteAuth';
 import Home from './Home/Home';
 import Login from './Login/Login';
 import Register from './SingUp/Register';
+import ReastPass from './compunant/ReastPass/ReastPass';
+import Footer from './Footer/Footer';
+
 // import Home from './Home/Home';
 function App() {
   return (
@@ -21,7 +24,9 @@ function App() {
        <Route path="/addItems" element={<AddItem></AddItem>}></Route>
        <Route path="/singIn" element={<Register/>}></Route>
        <Route path="/login" element={<Login/>}></Route>
+       <Route path='/reast'  element={<ReastPass/>}></Route>
      </Routes>
+     <Footer></Footer>
     </div>
   );
 }

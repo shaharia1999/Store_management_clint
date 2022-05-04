@@ -1,7 +1,11 @@
 import React from 'react';
 import './Navber.css';
-import { Container, Nav, Navbar} from 'react-bootstrap';
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { Container, Nav, Navbar, } from 'react-bootstrap';
+import { Link, useMatch, useResolvedPath,useNavigate, } from "react-router-dom";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
+
 
 const Navber = () => {
   function CustomLink({ children, to, ...props }) {
@@ -20,6 +24,20 @@ const Navber = () => {
       </div>
     );
   }
+  const [user, loading, error] = useAuthState(auth);
+  console.log(user);
+  const navigate=useNavigate();
+  const singout=()=>{
+    signOut(auth).than(()=>{
+      navigate('/login')
+
+    })
+    .catch((error) => {
+      // An error happened.
+    });
+
+   }
+ 
   return (
     <div className='header'>
     <Navbar bg="dark" expand="lg">
@@ -36,10 +54,23 @@ navbarScroll
 </Nav>
 <div className='navber-item'>
     <li><CustomLink to='/'>Home</CustomLink></li>
-    <li><CustomLink to='/manageItem'>Manage Items</CustomLink></li> 
-    <li><CustomLink to='/addItems'>Add items</CustomLink></li> 
-    <li><CustomLink  to='/singIn' >Sing in</CustomLink></li>
-    <li><CustomLink to='login'>Log in</CustomLink></li> 
+    {
+      user?.uid? <li><CustomLink to='/manageItem'>Manage Items</CustomLink></li> :
+      <></>
+
+    }{
+      user?.uid?<li><CustomLink to='/addItems'>Add items</CustomLink></li> :
+      <></>
+
+    }
+   
+    
+    <li><CustomLink    to='/singIn' >Sing in</CustomLink></li>
+    {
+           user?.uid?
+           <li><CustomLink onClick={singout} to='/' >Log Out</CustomLink></li>:
+            <li><CustomLink to='login'>Log in</CustomLink></li> 
+         }
 </div>
 
 </Navbar.Collapse>

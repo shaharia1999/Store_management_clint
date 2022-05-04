@@ -15,7 +15,7 @@ const ManageInventoryCard = (props) =>{
             console.log(url)
             const prosit=window.confirm("Are You sure You want to Delete the Id")
             if(prosit){
-            fetch(url, {
+            fetch(url,{
             method: 'DELETE',
                 })
            
