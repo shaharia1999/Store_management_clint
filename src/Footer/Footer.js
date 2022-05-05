@@ -11,7 +11,7 @@ const Footer = () => {
                      <p>© Warehouse Mobile 2022 – 2022 all rights reserved</p>
             </div>
             <div className='sucess'>
-                <h3> Sucess</h3>
+                <h3> Support</h3>
                 <li>Help & support</li>
                 <li>Terms & conditions</li>
                 <li>Privacy policy</li>

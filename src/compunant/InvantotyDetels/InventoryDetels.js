@@ -68,7 +68,7 @@ const InventoryDetels = () => {
                 <br />
                 <br />
                 <input type="text" id="increse" />
-                <button onClick={deliverdIncrease}>devebard</button>
+                <button onClick={deliverdIncrease}>Add product</button>
             </div>
             
            

@@ -63,6 +63,11 @@ navbarScroll
       <></>
 
     }
+    {
+      user?.uid?<li><CustomLink to='/myitem'>My item</CustomLink></li> :
+      <></>
+
+    }
    
     
     <li><CustomLink    to='/singIn' >Sing in</CustomLink></li>

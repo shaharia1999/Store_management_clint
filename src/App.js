@@ -11,6 +11,7 @@ import Login from './Login/Login';
 import Register from './SingUp/Register';
 import ReastPass from './compunant/ReastPass/ReastPass';
 import Footer from './Footer/Footer';
+import Myitem from './compunant/Myitem/Myitem';
 
 // import Home from './Home/Home';
 function App() {
@@ -25,6 +26,7 @@ function App() {
        <Route path="/singIn" element={<Register/>}></Route>
        <Route path="/login" element={<Login/>}></Route>
        <Route path='/reast'  element={<ReastPass/>}></Route>
+       <Route path='/myitem' element={<Myitem/>}></Route>
      </Routes>
      <Footer></Footer>
     </div>

@@ -2,6 +2,9 @@ import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+// import { signOut } from 'firebase/auth';
 
 
 const AddItem = () => {
@@ -9,7 +12,8 @@ const AddItem = () => {
    const handleSubmit=(event)=>{
     event.preventDefault()
     const name=event.target[0].value;
-     const email=event.target[1].value
+     const email=event.target[1].value;
+    
     const price=event.target[2].value;
     const quantity=event.target[3].value;
     const supliyer=event.target[4].value;
@@ -38,6 +42,20 @@ const AddItem = () => {
     
  
 }
+const [user, loading, error] = useAuthState(auth);
+console.log(user?.email)
+//   console.log(user);
+//   const navigate=useNavigate();
+//   const singout=()=>{
+//     signOut(auth).than(()=>{
+//       navigate('/login')
+
+//     })
+//     .catch((error) => {
+//       // An error happened.
+//     });
+
+//    }
   
  //onSubmit={fromControl} 
     return (
@@ -53,7 +71,7 @@ const AddItem = () => {
   </Form.Group>
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label> Worner Email address</Form.Label>
-    <Form.Control type="email" placeholder=""  />
+    <Form.Control type="email" placeholder="" value={user?.email} />
     <Form.Text className="text-muted">
       We'll never share your email with anyone else.
     </Form.Text>
