@@ -17,8 +17,8 @@ src={img1}
 alt="First slide"
 />
 <Carousel.Caption>
-<h1 className='text-white  zindex'> I'm Your Personal Trainer</h1>
-<p>You know exercise is good for you, but do you know how good</p>
+<h1 className='text-white  zindex'> WareHouse Store Management</h1>
+<p>Warehouse Mobile 2022 all rights reserved</p>
 </Carousel.Caption>
 </Carousel.Item>
 <Carousel.Item interval={500}>
@@ -28,8 +28,8 @@ src={img2}
 alt="Second slide"
 />
 <Carousel.Caption>
-<h1>I'm Your Personal Trainer</h1>
-<p>You know exercise is good for you, but do you know how good</p>
+<h1>WareHouse Store Management</h1>
+<p>Warehouse Mobile 2022 all rights reserved</p>
 </Carousel.Caption>
 </Carousel.Item>
 <Carousel.Item>
@@ -39,8 +39,8 @@ src={img3}
 alt="Third slide"
 />
 <Carousel.Caption>
-<h1>I'm Your Personal Trainer</h1>
-<p>You know exercise is good for you, but do you know how good</p>
+<h1>WareHouse Store Management</h1>
+<p>Warehouse Mobile 2022 all rights reserved</p>
 </Carousel.Caption>
 </Carousel.Item>
 </Carousel>
