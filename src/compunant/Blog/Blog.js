@@ -25,6 +25,9 @@ const Blog = () => {
              <li>Non-relational or distributed database system.</li>
              <li>They have dynamic schema</li>
              <li>These databases are best suited for hierarchical data storage.</li>
+
+             <h1></h1>
+             <p>Is a useful standard becoming more prevalent, because it sends information that can be verified and trusted with a digital signature. In their most basic form, JWTs allow you to sign information (referred to as claims) with a signature and can be verified at a later time with a secret signing key. The spec is also designed with more advanced features that help against man-in-the-middle and replay attacks. JWT contains so we can clearly understand why these best practices are important. In its most simple form, JWT has three distinct parts that are URL encoded for transport:</p>
              
 
             
