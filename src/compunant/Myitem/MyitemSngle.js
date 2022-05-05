@@ -15,7 +15,7 @@ const MyitemSngle = ({item}) => {
             <h4> Supliyar :{supliyer}</h4>
             <h4>Quattity :{quantity}</h4>
             <p> Description :{description}</p>
-            <p> Email:{email}</p>
+            <p className='text-primary'> Email: {email}</p>
             {/* <button onClick={()=>deletes(_id)}>Delete</button> */}
         </div>
         </div>

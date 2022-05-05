@@ -70,7 +70,7 @@ navbarScroll
     }
    
     
-    <li><CustomLink    to='/singIn' >Sing in</CustomLink></li>
+    
     {
            user?.uid?
            <li><CustomLink onClick={singout} to='/' >Log Out</CustomLink></li>:

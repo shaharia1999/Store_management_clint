@@ -12,6 +12,7 @@ import Register from './SingUp/Register';
 import ReastPass from './compunant/ReastPass/ReastPass';
 import Footer from './Footer/Footer';
 import Myitem from './compunant/Myitem/Myitem';
+import Error from "./compunant/Error/Error"
 
 // import Home from './Home/Home';
 function App() {
@@ -27,6 +28,7 @@ function App() {
        <Route path="/login" element={<Login/>}></Route>
        <Route path='/reast'  element={<ReastPass/>}></Route>
        <Route path='/myitem' element={<Myitem/>}></Route>
+       <Route path='*' element={<Error></Error>}></Route>
      </Routes>
      <Footer></Footer>
     </div>

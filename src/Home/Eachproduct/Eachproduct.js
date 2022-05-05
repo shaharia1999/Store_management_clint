@@ -21,7 +21,7 @@ const Eachproduct = ({item},{productF}) => {
                 <h4> Supliyar :{supliyer}</h4>
                 <h4>Quattity :{quantity}</h4>
                 <p> Description :{description}</p>
-                <button onClick={productButton}>Ubdate</button>
+                <button onClick={productButton}>Update</button>
             </div>
             
            

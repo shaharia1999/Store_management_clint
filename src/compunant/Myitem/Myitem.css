@@ -5,3 +5,14 @@
   
   
 }
+@media (max-width:760px) {
+    .my-item{
+
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        padding-left: 30px;
+      
+      
+    }
+    
+}

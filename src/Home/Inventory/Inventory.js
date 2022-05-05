@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Eachproduct from '../Eachproduct/Eachproduct';
 import './Inventoty.css';
 
@@ -20,6 +21,10 @@ const Inventory = () => {
                newproduct.map(item=><Eachproduct key={item._id} item={item}></Eachproduct>)
             }
             </div>
+            <div className='manage-button'>
+                <button><Link to="/manageItem">Manage Detels</Link></button>
+            </div>
+          
             
         </div>
     );

@@ -10,6 +10,15 @@
     
     
 }
+.manage-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.manage-button a{
+    text-decoration: none;
+    color: aliceblue;
+}
 @media (max-width:760px) {
     .inventory-grid{
      
