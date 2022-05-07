@@ -11,6 +11,7 @@ const Myitem = () => {
         .then(res=>res.json())
         .then(data=>setProduct(data))
     },[]);
+    
     const [user, loading, error] = useAuthState(auth);
     const email=user?.email;
   console.log(user?.email)
@@ -20,7 +21,7 @@ const Myitem = () => {
         <div className=''>
             <div className="my-item">
             {
-                myproduct.map(item=><MyitemSngle key={item.key} item={item}></MyitemSngle>)
+                myproduct.map(item=><MyitemSngle key={item.key} item={item} setData={setProduct} pro={product}></MyitemSngle>)
                
             }
             </div>
