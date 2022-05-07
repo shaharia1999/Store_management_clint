@@ -11,6 +11,7 @@ const InventoryDetels = () => {
 
     async function getAndUpdateProduct(id){
         return fetch(`https://afternoon-shelf-86767.herokuapp.com/product/${id}`)
+        
         .then(res=>res.json())
         .then(data=>setProduct(data))
     }

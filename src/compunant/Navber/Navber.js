@@ -25,7 +25,6 @@ const Navber = () => {
     );
   }
   const [user, loading, error] = useAuthState(auth);
-  console.log(user);
   const navigate=useNavigate();
   const singout=()=>{
     signOut(auth).than(()=>{

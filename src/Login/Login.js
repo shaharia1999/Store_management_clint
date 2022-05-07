@@ -6,9 +6,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
 import googleImg from '../images2/sing-in-img/google-signin-button-1024x260.png';
 import {  useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 
-const Login = () => {
+const Login =() => {
   let location = useLocation();
 let from = location.state?.from?.pathname || "/";
   
@@ -23,7 +24,7 @@ let from = location.state?.from?.pathname || "/";
       ] =useSignInWithEmailAndPassword(auth);
 
 
-      const fromControl=(e)=>{
+      const fromControl= async(e)=>{
         e.preventDefault()
       
        const email=e.target[0].value;
@@ -34,9 +35,11 @@ let from = location.state?.from?.pathname || "/";
        if(error){
         setErrors(  <p>Error: {error.message}</p>)
         return;
-
-        }
-        signInWithEmailAndPassword(email, password)
+        };
+        await signInWithEmailAndPassword(email, password);
+        const{data}=await axios.post('http://localhost:5000/login',{email});
+      console.log(data);
+         localStorage.setItem('accessTowken',data);
       };
       if( user){
         navigate(from, { replace: true });
