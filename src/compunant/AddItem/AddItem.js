@@ -100,7 +100,7 @@ console.log(user?.email)
   </Form.Group>
  
   <Button variant="danger" type="submit">
-     Register
+      Add Item
   </Button>
   
 </Form>
