@@ -33,12 +33,12 @@ let from = location.state?.from?.pathname || "/";
            
        }
        if(error){
-        setErrors(  <p>Error: {error.message}</p>)
+        setErrors(<p>Error: {error.message}</p>)
         return;
         };
         await signInWithEmailAndPassword(email, password);
         const{data}=await axios.post('http://localhost:5000/login',{email});
-      console.log(data);
+        console.log(data);
          localStorage.setItem('accessTowken',data);
       };
       if( user){

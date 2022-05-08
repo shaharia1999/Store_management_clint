@@ -6,6 +6,14 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey:process.env.API_KEY,
+//   authDomain: process.env.AUTH_DOMIN,
+//   projectId: process.env.PROJECT_ID,
+//   storageBucket: process.env.STOREGE_BUCKET,
+//   messagingSenderId: process.env.MESSEGENDER_ID,
+//   appId: process.env.APP_ID,
+// };
 const firebaseConfig = {
   apiKey: "AIzaSyD79u6Dz48mZksnQElO1L7o5qF8O7JXEJ8",
   authDomain: "store-management-dd4c6.firebaseapp.com",
