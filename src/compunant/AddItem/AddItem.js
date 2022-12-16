@@ -27,7 +27,7 @@ const AddItem = () => {
     // setData(newAreey);
   
 
-    fetch('https://afternoon-shelf-86767.herokuapp.com/product', {
+    fetch('https://randerstore.onrender.com/product', {
   method: 'POST',
   body: JSON.stringify(datas
   ),

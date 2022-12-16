@@ -8,7 +8,7 @@ const MyitemSngle = (props) => {
     
     const {name,price, picture,description,supliyer,quantity,_id,email}=item;
     const deletes=(_id)=>{
-        const url=`https://afternoon-shelf-86767.herokuapp.com/product/${_id}`
+        const url=`https://randerstore.onrender.com/product/${_id}`
         console.log(url)
         const prosit=window.confirm("Are You sure You want to Delete the Id")
         if(prosit){

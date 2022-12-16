@@ -10,7 +10,7 @@ const InventoryDetels = () => {
     const {id}=useParams();
 
     async function getAndUpdateProduct(id){
-        return fetch(`https://afternoon-shelf-86767.herokuapp.com/product/${id}`)
+        return fetch(`https://randerstore.onrender.com/product/${id}`)
         
         .then(res=>res.json())
         .then(data=>setProduct(data))
@@ -28,7 +28,7 @@ const InventoryDetels = () => {
         // console.log(inventory);
 
       const deliverd=()=>{
-        fetch(`https://afternoon-shelf-86767.herokuapp.com/product/reduce/${id}`,{method:"PUT"})
+        fetch(`/product/reduce/${id}`,{method:"PUT"})
         .then(res=>res.json())
         .then(data=>
             getAndUpdateProduct(id)
@@ -38,7 +38,7 @@ const InventoryDetels = () => {
           const inputValue=parseFloat( document.getElementById("increse").value);
         
         
-        fetch(`https://afternoon-shelf-86767.herokuapp.com/product/increase/${id}`,{method:"PUT",  headers: {
+        fetch(`https://randerstore.onrender.com/product/increase/${id}`,{method:"PUT",  headers: {
             'Content-Type': 'application/json'
             // 'Content-Type': 'application/x-www-form-urlencoded',
           }, body:`{"amount":${inputValue ||2}}`})

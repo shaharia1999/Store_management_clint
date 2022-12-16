@@ -7,7 +7,7 @@ import MyitemSngle from './MyitemSngle';
 const Myitem = () => {
     const [product,setProduct]=useState([]);
     useEffect(()=>{
-        fetch('https://afternoon-shelf-86767.herokuapp.com/product')
+        fetch('https://randerstore.onrender.com/product')
         .then(res=>res.json())
         .then(data=>setProduct(data))
     },[]);
